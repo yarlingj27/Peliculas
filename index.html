@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemax</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<script src="js/peliculas.js"></script>
+
+<body>
+
+    <header>
+        <div class="header-logo">
+            <h2><a href="index.html">Cinemax <i class="fas fa-rocket"></i></a></i></h2>
+        </div>
+
+        <div class="header-nav">
+            <nav>
+                <a href="index.html" class="selected">Inicio</a>
+                <a href="html/contacto.html">Contácto</a>
+            </nav>
+        </div>
+
+         <!-- Botón hamburguesa -->
+         <button class="hamburger-btn">&#9776;</button>
+         <div class="mobile-nav">
+             <nav>
+                <a href="index.html" class="selected">Inicio</a>
+                <a href="html/contacto.html">Contácto</a>
+             </nav>
+         </div>
+    </header>
+
+    <main>
+        <section>
+            
+            <h3>Películas en tendencia</h3>
+            <div class="buscador">
+                <input type="text" id="input-busqueda" class="input-busqueda" onblur="cargarPelis()" placeholder="Busca una película...">
+                <button onclick="buscarPeliculas()">Buscar</button>
+            </div>
+            <div id="trending-movies">
+            </div>
+        </section>
+    </main>
+
+     <!-- MODAL -->
+     <div id="overlay">
+        <div class="modal" id='modal'>
+            <span onclick="modalDeactivated()"><b>X</b></span>
+
+            <div id="imagen" >
+                <img src="" id="imagen-movie" alt="Imagen de la pelicula">
+                <span>⭐</span>
+                <span  id="calificacion-movie"></span>
+            </div>
+
+            <div id="contenido-modal">
+                <p id="nombre-movie"></p>
+                <p class="textos" id="genero-movie"></p>
+                <p class="textos" id="date-movie"></p>
+                <p class="textos" id="duracion-movie"></p>
+                <p class="textos" id="sinopsis-movie"></p>
+                
+                <!-- <p  id="calificacion-movie"></p> -->
+            </div>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
